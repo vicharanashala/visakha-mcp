@@ -16,7 +16,7 @@ RUN pip install --no-cache-dir -r requirements.txt sentence-transformers
 
 # Copy application files
 COPY faq.py .
-COPY ["FAQ Data", "./FAQ Data/"]
+COPY FAQ_Data ./FAQ_Data
 
 # Expose port
 EXPOSE 9010
