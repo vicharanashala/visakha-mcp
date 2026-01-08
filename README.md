@@ -1,5 +1,8 @@
 # FAQ MCP Server
 
+[![Docker Hub Publish](https://github.com/vicharanashala/faq-mcp-server/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/vicharanashala/faq-mcp-server/actions/workflows/docker-publish.yml)
+[![Docker Hub](https://img.shields.io/docker/v/vicharanashala/faq-mcp-server?label=Docker%20Hub)](https://hub.docker.com/r/vicharanashala/faq-mcp-server)
+
 Intelligent FAQ search system using FastMCP framework with hybrid TF-IDF and semantic embeddings.
 
 ## Features
@@ -39,6 +42,62 @@ cp .env.example .env
 # Run the server
 python faq.py
 ```
+
+## Docker Hub Deployment
+
+### Using Pre-built Image
+
+Pull and run the latest image from Docker Hub:
+
+```bash
+# Pull the latest image
+docker pull vicharanashala/faq-mcp-server:latest
+
+# Run with environment variables
+docker run -d \
+  --name faq-mcp-server \
+  -p 9010:9010 \
+  -e MONGODB_URI="your-mongodb-connection-string" \
+  -e DB_NAME="faq_bootcamp" \
+  -e COLLECTION_NAME="questions" \
+  vicharanashala/faq-mcp-server:latest
+
+# View logs
+docker logs faq-mcp-server -f
+```
+
+### Available Tags
+
+- `latest` - Most recent build from main branch
+- `v1.0.0`, `v1.0`, `v1` - Semantic version tags
+- `main-<sha>` - Specific commit builds
+
+### Multi-Platform Support
+
+Images are available for:
+- `linux/amd64` (x86_64)
+- `linux/arm64` (ARM64/Apple Silicon)
+
+### Automated Deployment
+
+This project uses GitHub Actions for automated Docker Hub deployment:
+
+1. **Tag-based Release**: Push a version tag to trigger deployment
+   ```bash
+   git tag v1.0.0
+   git push origin v1.0.0
+   ```
+
+2. **Manual Trigger**: Use GitHub Actions workflow dispatch
+
+#### Required GitHub Secrets
+
+To enable automated deployment, configure these secrets in your GitHub repository:
+
+| Secret | Description |
+|--------|-------------|
+| `DOCKERHUB_USERNAME` | Your Docker Hub username |
+| `DOCKERHUB_TOKEN` | Docker Hub access token ([create here](https://hub.docker.com/settings/security)) |
 
 ## Configuration
 
