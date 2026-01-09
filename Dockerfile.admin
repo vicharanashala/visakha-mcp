@@ -1,4 +1,4 @@
-# Dockerfile for FAQ MCP Server
+# Dockerfile for Admin MCP Server
 FROM python:3.12-slim
 
 WORKDIR /app
@@ -16,7 +16,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY src/ .
 
 # Expose the port the app runs on
-EXPOSE 8000
+EXPOSE 9011
 
 # Run the application
-CMD ["python", "faq.py"]
+CMD ["python", "-u", "admin_server.py"]

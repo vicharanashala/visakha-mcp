@@ -9,6 +9,7 @@ from pathlib import Path
 from typing import List, Optional, Dict, Any
 from urllib.parse import quote_plus
 from datetime import datetime
+from difflib import SequenceMatcher
 
 import numpy as np
 import pymongo
@@ -100,6 +101,22 @@ class SearchResponse(BaseModel):
     search_method: str = Field(..., description="Search method used")
 
 
+class AddFAQRequest(BaseModel):
+    """Request model for adding a new FAQ."""
+    question: str = Field(..., min_length=10, description="The FAQ question (minimum 10 characters)")
+    answer: str = Field(..., min_length=20, description="The FAQ answer (minimum 20 characters)")
+    category: str = Field(..., description="FAQ category (e.g., 'Program Overview', 'Eligibility & Registration')")
+    question_id: Optional[str] = Field(None, description="Optional question ID (auto-generated if not provided)")
+
+
+class AddFAQResponse(BaseModel):
+    """Response model for adding a new FAQ."""
+    success: bool = Field(..., description="Whether the FAQ was added successfully")
+    message: str = Field(..., description="Success or error message")
+    question_id: Optional[str] = Field(None, description="The question ID of the added FAQ")
+    faq: Optional[Dict[str, Any]] = Field(None, description="The complete FAQ document that was added")
+
+
 # ============================================================================
 # GLOBAL STATE & UTILITIES
 # ============================================================================
@@ -171,6 +188,52 @@ def get_embedding_function():
         _embedding_function = dummy_embed
     
     return _embedding_function
+
+
+def invalidate_caches():
+    """Invalidate all caches to force reload of FAQs."""
+    global _faq_cache, _vectorizer, _tfidf_matrix
+    _faq_cache = []
+    _vectorizer = None
+    _tfidf_matrix = None
+    print("✓ Caches invalidated")
+
+
+async def generate_question_id(category: str) -> str:
+    """
+    Generate a unique question ID based on category.
+    Format: Q{category_num}.{question_num}
+    """
+    if not _faq_cache:
+        await load_faqs_from_mongodb()
+    
+    # Extract category questions from existing FAQs
+    category_questions = [
+        faq for faq in _faq_cache 
+        if faq.get('category', '').lower() == category.lower()
+    ]
+    
+    if not category_questions:
+        # New category, start with Q1.1
+        return "Q1.1"
+    
+    # Find the highest question number in this category
+    max_num = 0
+    for faq in category_questions:
+        qid = faq.get('question_id', '')
+        if '.' in qid:
+            try:
+                parts = qid.split('.')
+                num = int(parts[1])
+                max_num = max(max_num, num)
+            except (ValueError, IndexError):
+                continue
+    
+    # Get category number from first question
+    first_qid = category_questions[0].get('question_id', 'Q1.1')
+    category_num = first_qid.split('.')[0].replace('Q', '')
+    
+    return f"Q{category_num}.{max_num + 1}"
 
 
 async def load_faqs_from_mongodb() -> List[dict]:
@@ -393,6 +456,176 @@ async def search_faq(query: str, top_k: int = 3) -> List[FAQResult]:
     results = await search_faqs(query, top_k)
     
     return results
+
+
+@mcp.tool()
+async def add_faq(
+    question: str,
+    answer: str,
+    category: str,
+    question_id: Optional[str] = None
+) -> AddFAQResponse:
+    """
+    Add a new FAQ question-answer pair to the database.
+    
+    This tool is designed for admin users to add new FAQ entries to the system.
+    The FAQ will be validated, assigned an ID, embedded, and stored in MongoDB.
+    
+    Duplicate detection uses three methods:
+    1. Exact matching (case-sensitive)
+    2. Fuzzy matching (85% threshold using difflib)
+    3. Semantic similarity (90% threshold using embeddings)
+    
+    Args:
+        question: The FAQ question (minimum 10 characters)
+        answer: The FAQ answer (minimum 20 characters)
+        category: FAQ category (e.g., 'Program Overview', 'ViBe Platform')
+        question_id: Optional custom question ID (auto-generated if not provided)
+    
+    Returns:
+        AddFAQResponse with success status, message, and the added FAQ details
+    
+    Example:
+        add_faq(
+            question="How do I reset my password?",
+            answer="To reset your password, click on 'Forgot Password' on the login page...",
+            category="ViBe Platform"
+        )
+    """
+    # Validate inputs
+    if len(question.strip()) < 10:
+        return AddFAQResponse(
+            success=False,
+            message="Question must be at least 10 characters long"
+        )
+    
+    if len(answer.strip()) < 20:
+        return AddFAQResponse(
+            success=False,
+            message="Answer must be at least 20 characters long"
+        )
+    
+    if not category.strip():
+        return AddFAQResponse(
+            success=False,
+            message="Category is required"
+        )
+    
+    # Check MongoDB connection
+    if not MONGODB_URI:
+        return AddFAQResponse(
+            success=False,
+            message="MongoDB connection not configured"
+        )
+    
+    try:
+        # Connect to MongoDB
+        client = MongoClient(MONGODB_URI, serverSelectionTimeoutMS=5000)
+        client.server_info()  # Test connection
+        
+        db = client[DB_NAME]
+        collection = db[COLLECTION_NAME]
+        
+        # Check for duplicate question using fuzzy matching and semantic similarity
+        # 1. Exact match check
+        existing = collection.find_one({"question": question.strip()})
+        if existing:
+            client.close()
+            return AddFAQResponse(
+                success=False,
+                message=f"A FAQ with this exact question already exists (ID: {existing.get('question_id', 'unknown')})"
+            )
+        
+        # 2. Fuzzy matching check (using difflib)
+        FUZZY_THRESHOLD = 0.85  # 85% similarity threshold
+        
+        all_faqs = list(collection.find({}, {'question': 1, 'question_id': 1}))
+        for faq in all_faqs:
+            existing_question = faq.get('question', '')
+            similarity = SequenceMatcher(None, question.strip().lower(), existing_question.lower()).ratio()
+            if similarity > FUZZY_THRESHOLD:
+                client.close()
+                return AddFAQResponse(
+                    success=False,
+                    message=f"A very similar question already exists (ID: {faq.get('question_id', 'unknown')}, {similarity*100:.1f}% similar): '{existing_question}'"
+                )
+        
+        # 3. Semantic similarity check (using embeddings)
+        SEMANTIC_THRESHOLD = 0.90  # 90% semantic similarity threshold
+        
+        try:
+            embed_fn = get_embedding_function()
+            new_question_embedding = np.array(embed_fn(question.strip()))
+            
+            # Check against all existing questions with embeddings
+            for faq in all_faqs:
+                faq_full = collection.find_one({'_id': faq['_id']})
+                if faq_full and 'embedding' in faq_full:
+                    existing_embedding = np.array(faq_full['embedding'])
+                    semantic_similarity = cosine_similarity([new_question_embedding], [existing_embedding])[0][0]
+                    
+                    if semantic_similarity > SEMANTIC_THRESHOLD:
+                        client.close()
+                        return AddFAQResponse(
+                            success=False,
+                            message=f"A semantically similar question already exists (ID: {faq.get('question_id', 'unknown')}, {semantic_similarity*100:.1f}% similar): '{faq.get('question', '')}'"
+                        )
+        except Exception as e:
+            print(f"Warning: Semantic similarity check failed: {e}")
+            # Continue without semantic check if it fails
+        
+        # Generate question ID if not provided
+        if not question_id:
+            question_id = await generate_question_id(category.strip())
+        
+        # Generate embedding for the question
+        try:
+            embed_fn = get_embedding_function()
+            embedding = embed_fn(question.strip())
+        except Exception as e:
+            print(f"Warning: Failed to generate embedding: {e}")
+            embedding = None
+        
+        # Create FAQ document
+        faq_doc = {
+            "question_id": question_id,
+            "question": question.strip(),
+            "answer": answer.strip(),
+            "category": category.strip(),
+            "created_at": datetime.utcnow().isoformat(),
+        }
+        
+        if embedding:
+            faq_doc["embedding"] = embedding
+        
+        # Insert into MongoDB
+        result = collection.insert_one(faq_doc)
+        
+        # Remove MongoDB _id for response
+        faq_doc.pop('_id', None)
+        
+        client.close()
+        
+        # Invalidate caches so new FAQ is immediately searchable
+        invalidate_caches()
+        
+        return AddFAQResponse(
+            success=True,
+            message=f"FAQ successfully added with ID: {question_id}",
+            question_id=question_id,
+            faq=faq_doc
+        )
+        
+    except pymongo.errors.ConnectionFailure as e:
+        return AddFAQResponse(
+            success=False,
+            message=f"Failed to connect to MongoDB: {str(e)}"
+        )
+    except Exception as e:
+        return AddFAQResponse(
+            success=False,
+            message=f"Error adding FAQ: {str(e)}"
+        )
 
 
 if __name__ == "__main__":
