@@ -133,6 +133,7 @@ async def add_faq(
     answer: str,
     category: str,
     ctx: Context,
+    password: str | None = None,
     added_by: str | None = None,
     question_id: str | None = None
 ) -> AddFAQResponse:
@@ -146,12 +147,28 @@ async def add_faq(
         question: The FAQ question (minimum 10 characters)
         answer: The FAQ answer (minimum 20 characters)
         category: FAQ category
+        password: Admin password for authentication
         added_by: OPTIONAL. System automatically detects user. Do NOT ask user for this.
         question_id: Optional question ID (auto-generated if not provided)
     
     Returns:
         AddFAQResponse with success status
     """
+    # 0. Auth Validation
+    expected_password = os.getenv('ADMIN_PASSWORD')
+    
+    if not password:
+        return AddFAQResponse(
+            success=False,
+            message="Error: Password is required to perform this action."
+        )
+            
+    if password.strip() != expected_password:
+        return AddFAQResponse(
+            success=False,
+            message="Error: Incorrect password. Access denied."
+        )
+        
     # 1. Try to use the explicitly provided added_by if present
     # (LLM might still pass it if user explicitly said "Added by X")
     final_added_by = added_by

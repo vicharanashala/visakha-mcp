@@ -15,6 +15,7 @@ services:
       - SERVER_HOST=${SERVER_HOST:-0.0.0.0}
       - ADMIN_SERVER_PORT=${ADMIN_SERVER_PORT:-9011}
       - DEFAULT_ADMIN_USER=Kshitij Pandey
+      - ADMIN_PASSWORD=${ADMIN_PASSWORD:-admin123}
     restart: unless-stopped
     networks:
       - mcp-network
