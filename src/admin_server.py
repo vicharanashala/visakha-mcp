@@ -6,6 +6,8 @@ Provides administrative tools for adding FAQs, viewing recent additions, and exp
 
 import os
 import asyncio
+import base64
+import secrets
 from datetime import datetime
 from typing import Optional, List, Dict, Any
 from difflib import SequenceMatcher
@@ -133,41 +135,98 @@ async def add_faq(
     answer: str,
     category: str,
     ctx: Context,
-    password: str | None = None,
     added_by: str | None = None,
     question_id: str | None = None
 ) -> AddFAQResponse:
     """
     Add a new FAQ question-answer pair to the database.
     
-    The 'added_by' field is AUTOMATICALLY handling by the system.
+    🔐 SECURITY: Session-Based Authentication
+    This tool uses session-based authentication (standard MCP model):
+    - Users configure the admin password in LibreChat's "Configure Variables"
+    - This establishes an authenticated MCP session
+    - All tool calls within that session are trusted
+    - No password needed for individual tool calls
+    
+    The 'added_by' field is AUTOMATICALLY handled by the system.
     DO NOT ASK THE USER FOR 'added_by'.
     
     Args:
         question: The FAQ question (minimum 10 characters)
         answer: The FAQ answer (minimum 20 characters)
         category: FAQ category
-        password: Admin password for authentication
         added_by: OPTIONAL. System automatically detects user. Do NOT ask user for this.
         question_id: Optional question ID (auto-generated if not provided)
     
     Returns:
         AddFAQResponse with success status
     """
-    # 0. Auth Validation
+    # 0. Password Validation via Header
+    # LibreChat passes user-configured password via X-Admin-Password header (customUserVars)
     expected_password = os.getenv('ADMIN_PASSWORD')
     
-    if not password:
+    if not expected_password:
         return AddFAQResponse(
             success=False,
-            message="Error: Password is required to perform this action."
+            message="Error: Admin password is not configured on the server. Please contact the administrator."
         )
+    
+    # Extract password from request headers
+    provided_password = None
+    try:
+        req_ctx = getattr(ctx, 'request_context', None)
+        if req_ctx and hasattr(req_ctx, 'request'):
+            request = req_ctx.request
+            # Extract the raw header value
+            raw_password = (
+                request.headers.get('x-user-m-key') or         # New variable M_KEY (prefix x-user-)
+                request.headers.get('x-user-password') or      # Old variable fallback
+                request.headers.get('x-admin-password') or 
+                request.headers.get('X-Admin-Password')
+            )
             
-    if password.strip() != expected_password:
+            # Check if it's actually set and not the literal template string from LibreChat
+            # LibreChat sends literal "{{VAR_NAME}}" if the user hasn't configured it.
+            if raw_password and not (raw_password.startswith("{{") and raw_password.endswith("}}")):
+                provided_password = raw_password.strip()
+            else:
+                provided_password = None
+            
+            print("=" * 80)
+            print(f"DEBUG: Authentication Check")
+            print(f"DEBUG: Expected: {expected_password}")
+            print(f"DEBUG: Raw Header Value: {raw_password}")
+            print(f"DEBUG: Interpolated Password: {'***' if provided_password else 'None'}")
+            print("=" * 80)
+    except Exception as e:
+        print(f"ERROR: Failed to extract password: {e}")
+    
+    unified_error_message = (
+        "I’m sorry—I wasn’t able to add the FAQ because the system’s admin authentication didn’t succeed. "
+        "This usually means the admin password stored in the “Configure Variables” settings is missing or incorrect.\n\n"
+        "If you’re an admin, please double‑check the password you set for the MCP admin server and try again. "
+        "Once the credentials are valid, the new FAQ will be added successfully. Let me know if there’s anything else I can help with!"
+    )
+    
+    # Case 1: Password is not set (Missing or Literal Template)
+    if not provided_password:
         return AddFAQResponse(
             success=False,
-            message="Error: Incorrect password. Access denied."
+            message=unified_error_message
         )
+    
+    # Case 2: Incorrect Password
+    import secrets
+    if not secrets.compare_digest(provided_password, expected_password):
+        print(f"DEBUG: Auth FAILED - mismatch")
+        return AddFAQResponse(
+            success=False,
+            message=unified_error_message
+        )
+    
+    print(f"DEBUG: Auth SUCCESS")
+    # Password validated - proceed with adding FAQ
+
         
     # 1. Try to use the explicitly provided added_by if present
     # (LLM might still pass it if user explicitly said "Added by X")
@@ -479,10 +538,21 @@ async def add_faq(
 if __name__ == "__main__":
     print(f"\n🚀 Starting FAQ Admin MCP Server on http://{SERVER_HOST}:{SERVER_PORT}")
     print("=" * 60)
+    print("🔐 Password Protection: ENABLED (MCP Connection Level)")
     print("Available tools:")
     print("  - add_faq: Add new FAQ with user tracking")
     print("  # - last_n: Get last n FAQs as CSV (Disabled)")
     print("  # - download_data: Export all FAQs as CSV (Disabled)")
     print("  # - debug_context: Inspect request context (Disabled)")
     print("=" * 60)
-    mcp.run(transport='streamable-http', host=SERVER_HOST, port=SERVER_PORT)
+    print("\n⚠️  Note: Password validation at MCP configuration level")
+    print(f"    LibreChat must provide correct password when configuring server\n")
+    
+    # Run the MCP server with streamable-http transport
+    mcp.run(
+        transport='streamable-http',
+        host=SERVER_HOST,
+        port=SERVER_PORT
+    )
+
+
