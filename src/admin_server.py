@@ -192,11 +192,16 @@ async def add_faq(
             else:
                 provided_password = None
             
+            print("\n" + "=" * 80)
+            print("🔐 AUTHENTICATION DEBUG LOG")
             print("=" * 80)
-            print(f"DEBUG: Authentication Check")
-            print(f"DEBUG: Expected: {expected_password}")
-            print(f"DEBUG: Raw Header Value: {raw_password}")
-            print(f"DEBUG: Interpolated Password: {'***' if provided_password else 'None'}")
+            print(f"EXPECTED PASSWORD (ADMIN_PASSWORD): {expected_password}")
+            print(f"RAW HEADER VALUE RECEIVED: {raw_password}")
+            
+            if provided_password:
+                print(f"INTERPOLATED CREDENTIAL (MATCHED): {'***' if provided_password else 'None'}")
+            else:
+                print("INTERPOLATED CREDENTIAL: None (Matches literal template or missing)")
             print("=" * 80)
     except Exception as e:
         print(f"ERROR: Failed to extract password: {e}")
@@ -210,6 +215,10 @@ async def add_faq(
     
     # Case 1: Password is not set (Missing or Literal Template)
     if not provided_password:
+        print("\n" + "!" * 80)
+        print("❌ AUTHENTICATION FAILED: Password not set or literal template received")
+        print(f"ERROR MESSAGE RETURNED: {unified_error_message}")
+        print("!" * 80 + "\n")
         return AddFAQResponse(
             success=False,
             message=unified_error_message
@@ -218,13 +227,18 @@ async def add_faq(
     # Case 2: Incorrect Password
     import secrets
     if not secrets.compare_digest(provided_password, expected_password):
-        print(f"DEBUG: Auth FAILED - mismatch")
+        print("\n" + "!" * 80)
+        print(f"❌ AUTHENTICATION FAILED: Incorrect password provided")
+        print(f"ERROR MESSAGE RETURNED: {unified_error_message}")
+        print("!" * 80 + "\n")
         return AddFAQResponse(
             success=False,
             message=unified_error_message
         )
     
-    print(f"DEBUG: Auth SUCCESS")
+    print("\n" + "✅" * 40)
+    print("✅ AUTHENTICATION SUCCESS: Proceeding with tool execution")
+    print("✅" * 40 + "\n")
     # Password validated - proceed with adding FAQ
 
         
