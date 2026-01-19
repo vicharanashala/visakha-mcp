@@ -1,0 +1,349 @@
+{
+  "source": "https://github.com/sudarshansudarshan/pinternship/blob/main/Faq.md",
+  "migration_date": "2026-01-19",
+  "program": "Pinternship - VLED Lab, IIT Ropar",
+  "total_faqs": 68,
+  "categories": 11,
+  "faqs": [
+    {
+      "category": "Internship Overview",
+      "question": "What is this internship about?",
+      "answer": "Pinternship is organized by VLED Lab at the Indian Institute of Technology Ropar in online mode. It's a comprehensive full-stack development internship program focused on the MERN stack (MongoDB, Express.js, React, Node.js/TypeScript)."
+    },
+    {
+      "category": "Internship Overview",
+      "question": "Is this internship time-bound or duration-based?",
+      "answer": "The internship follows a structured timeline with specific milestones and deliverables. The maximum duration of the internship is 2.5 months."
+    },
+    {
+      "category": "Internship Overview",
+      "question": "What is the mode of this internship?",
+      "answer": "The internship will be conducted in online mode only."
+    },
+    {
+      "category": "Internship Overview",
+      "question": "Are there fixed timings for live sessions?",
+      "answer": "The program includes scheduled live sessions, workshops, and mentorship meetings. The timings for these sessions will be conveyed well in advance."
+    },
+    {
+      "category": "Internship Overview",
+      "question": "Where can I find the Internship ID?",
+      "answer": "The Internship ID will be mentioned in the offer letter sent by NPTEL POC."
+    },
+    {
+      "category": "Mode of Internship & Attendance",
+      "question": "Can we opt for an on-campus/offline internship?",
+      "answer": "The program will be conducted strictly in online mode."
+    },
+    {
+      "category": "Mode of Internship & Attendance",
+      "question": "Is attendance tracked in this internship?",
+      "answer": "Attendance is compulsory for the standups that are scheduled for every Monday, Wednesday and Friday at 8:45 PM. Attendance is tracked for all the live session activities. Attendance will be counted only if your camera remains ON for the entire Zoom session. If the camera is not switched on for a sustained duration, the session may not be considered as full attendance."
+    },
+    {
+      "category": "Mode of Internship & Attendance",
+      "question": "Do I need to use a specific name or email for the internship?",
+      "answer": "Yes. You must use the same name and email ID used during registration across all platforms (ViBe, GitHub, Cliq, etc.) for automated tracking of your progress."
+    },
+    {
+      "category": "Mode of Internship & Attendance",
+      "question": "Should I fill the attendance form attached to the NPTEL offer letter?",
+      "answer": "Yes. You must fill the Google Form provided in the NPTEL offer letter every day during your internship (except Sundays). Fill in all required details daily. The form should be preferably filled in the evening, after completing the day's work. This form is mandatory for marking your attendance on NPTEL's side throughout the internship. Please ensure that the form is filled daily going forward to avoid missing attendance again."
+    },
+    {
+      "category": "Mode of Internship & Attendance",
+      "question": "How can I avail the one-day leave allowed during the internship?",
+      "answer": "Taking leave is discouraged, as you may miss important updates shared during live sessions or fall behind in your progress. It will be your own responsibility to complete the work missed on the leave day. However, if you must take the leave, write a message in the main Cliq Channel stating the reason for your leave, tag @Nitin Sankar A sir, @Jinal Gupta ma'am, and @Harshdeep R ma'am in the message. Post the request at least one day in advance and clearly mention the reason for the leave and the exact date on which you intend to take the leave."
+    },
+    {
+      "category": "Mentorship & Guidance",
+      "question": "Will the course instructor supervise our work directly?",
+      "answer": "The instructor may interact with participants depending on project requirements. Mentors and coordinators will engage via live sessions and forums."
+    },
+    {
+      "category": "Mentorship & Guidance",
+      "question": "Do we get to meet our mentors?",
+      "answer": "Yes, your project mentors can schedule a meeting based on the doubts and issues you are facing in the projects or in the learning phase."
+    },
+    {
+      "category": "Support and Resolution Protocol",
+      "question": "Where do I raise my concern initially?",
+      "answer": "Initially, try to get your query resolved from the FAQ. Check the Broadcast cliq channel, else from your fellow interns in the Discussion Cliq channels. If the query is still not resolved, you can email your query to pinternship-support@vicharanashala.zohodesk.in. Responses are provided within 2 hours between 9:00 AM and 9:00 PM."
+    },
+    {
+      "category": "Support and Resolution Protocol",
+      "question": "What if I don't receive a response within 24 hours?",
+      "answer": "Use the Pinternship - Escalation Cliq channel to raise your concern. We recommend that you follow the escalation policy."
+    },
+    {
+      "category": "Support and Resolution Protocol",
+      "question": "Is this escalation process mandatory?",
+      "answer": "Yes, this three-step process must be followed."
+    },
+    {
+      "category": "Completion & Certification",
+      "question": "What are the program completion criteria?",
+      "answer": "The completion criteria include: Completion of all course modules on the Learning platform (Required), Completion of case studies provided for learning using the code (Required), Completion of Viva/endorsement for the Case Study, and Contribution to real-time applications or projects."
+    },
+    {
+      "category": "Completion & Certification",
+      "question": "Where can I find information on certification?",
+      "answer": "NPTEL interns should contact the NPTEL internship team for the information regarding certificates."
+    },
+    {
+      "category": "Completion & Certification",
+      "question": "Will recommendation letters be provided?",
+      "answer": "Recommendation letters are not guaranteed. You may request one from the course instructor after completing the internship, and it will be at their discretion based on the performance of the candidate."
+    },
+    {
+      "category": "Discontinuation Policy",
+      "question": "What is the expected pace of learning?",
+      "answer": "You are expected to maintain steady progress through all three required components with well-defined milestones: Core Learning (ViBe Training), Advanced Learning (Case Studies), and Practical Learning (Projects). You should work through the modules consistently to ensure continuous engagement and build momentum in your learning journey."
+    },
+    {
+      "category": "Discontinuation Policy",
+      "question": "What happens if I don't maintain regular progress?",
+      "answer": "If you remain inactive or fail to make reasonable progress over an extended period, we may discontinue your access to the program. The program has a 2-month duration with a possible 15-day extension based on individual circumstances. This policy helps ensure that active learners have the best support and resources."
+    },
+    {
+      "category": "Discontinuation Policy",
+      "question": "Can I appeal a discontinuation decision?",
+      "answer": "No, discontinuation decisions are final and cannot be appealed if the attendance or milestone requirements are not met."
+    },
+    {
+      "category": "Discontinuation Policy",
+      "question": "Can I rejoin the program after discontinuation?",
+      "answer": "No, once discontinued, you cannot rejoin the current program. You would need to apply afresh for any future program offerings, subject to availability."
+    },
+    {
+      "category": "Discontinuation Policy",
+      "question": "How does the Discontinuation Policy differ from the Ejection Policy?",
+      "answer": "The Discontinuation Policy addresses prolonged inactivity at an administrative level, while the Ejection Policy is a real-time, algorithm-based mechanism focused on maintaining cohort momentum and learning quality."
+    },
+    {
+      "category": "ViBe Platform",
+      "question": "How do I log in to ViBe?",
+      "answer": "To log in to the ViBe platform: Open the ViBe invite link shared with you via email, Click Continue as Student when prompted, Select Continue with Google, Ensure you sign in using the same email ID (college email / registered email) that received the invite. Once authenticated, you will be redirected to your ViBe Dashboard, where your enrolled course will be visible. Logging in with a different email ID may result in access issues or missing course visibility."
+    },
+    {
+      "category": "ViBe Platform",
+      "question": "Invite accepted but shows 'No course enrolled'?",
+      "answer": "If you see 'No course enrolled': Make sure you are logged in with the correct registered email ID, Check if your college email has multiple aliases and try the correct one, Log out and log in again once. If the issue continues, contact support with your registered email ID and a screenshot."
+    },
+    {
+      "category": "ViBe Platform",
+      "question": "Why are videos stuck or repeating?",
+      "answer": "This may happen due to ViBe's monitored learning system. Common reasons include: Videos must be watched fully and in sequence (no skipping), Camera and microphone permissions must be enabled, Poor lighting or high background noise can affect playback, Switching tabs or staying idle may restart the video. For smooth playback, stay on the ViBe tab, keep your camera on, and watch videos in a quiet, well-lit environment."
+    },
+    {
+      "category": "ViBe Platform",
+      "question": "Can I use a mobile or tablet?",
+      "answer": "No, only desktop/laptop is supported."
+    },
+    {
+      "category": "ViBe Platform",
+      "question": "I'm experiencing video issues (stuck, looping, skipping) on ViBe. How do I troubleshoot?",
+      "answer": "Try these troubleshooting steps in order: 1. Refresh the page and check multiple times, 2. Inspect browser console: Right-click → Inspect → Go to Network or Console tab → Try watching the video and check for any visible errors, 3. Log out and log in again, 4. Use a different browser, 5. Clear browsing data and cache, then try to re-login. If the issue persists after trying all steps, record the issue and email it to: pinternship-support@vicharanashala.zohodesk.in."
+    },
+    {
+      "category": "ViBe Platform",
+      "question": "I have completed all videos and quizzes in the ViBe course, but my progress is still showing less than 100%. What should I do?",
+      "answer": "Please do not worry. This is a dashboard-level technical issue that has already been acknowledged by the support team and communicated in the Cliq threads. The team is actively working on resolving it, and your progress will be updated automatically once the issue is fixed. In the meantime, you may try: 1. Refresh your browser, 2. Log out, clear your browser cache, and log in again. If the issue still persists after these steps, no further action is required from your side. Your course completion status will be corrected by the support team shortly."
+    },
+    {
+      "category": "Cliq Channel",
+      "question": "How do I join the Cliq Channel?",
+      "answer": "Follow these steps only on a laptop or desktop (mobile is not supported): 1. Check your email for the Cliq channel invite and open it, 2. Sign up or log in to Zoho Cliq using Google, using the same email ID on which you received the invite, 3. In the left navigation bar, select #Channels, 4. Click on the Join button, 5. Locate all the channels starting with the name Pinternship and click Join."
+    },
+    {
+      "category": "Cliq Channel",
+      "question": "I am unable to join the Cliq Channel due to the message 'Collaboration with different regional external users in Zoho Cliq is disabled'. What should I do?",
+      "answer": "If you face this issue, follow the steps below: 1. Click on your Profile icon (top-right corner), 2. Select Admin Panel under My Organization, 3. Go to Policies under the Permissions section, 4. Scroll down to Channel and Direct Messages Collaboration, 5. Under Universal Access, enable both checkboxes, 6. Refresh the Cliq page and try joining the channel again. If the issue persists, take a screenshot or screen recording clearly showing the error message, briefly explain the problem, and email it to: pinternship-support@vicharanashala.zohodesk.in between 9:00 AM and 9:00 PM."
+    },
+    {
+      "category": "Cliq Channel",
+      "question": "I have joined the Cliq Channel, but I am unable to message in it. What should I do?",
+      "answer": "This issue is usually caused by restricted collaboration permissions. Follow the steps mentioned in FAQ 8.2 to enable Universal Access, then refresh the page. If you are still unable to send messages, take a screenshot or screen recording of the issue, briefly explain the problem, and email it to: pinternship-support@vicharanashala.zohodesk.in between 9:00 AM and 9:00 PM."
+    },
+    {
+      "category": "Cliq Channel",
+      "question": "How do I update my profile picture so everyone can view it?",
+      "answer": "1. Open Zoho Cliq on desktop, 2. Click your Profile icon (top-right corner), 3. Click My Zoho Account next to the Sign Out button, 4. Authorize using Google, 5. Go to Settings → Preferences, 6. Set Profile Picture Visibility to Anyone, 7. Return to Cliq and refresh the page, 8. Click your Profile icon again and upload a clear profile picture where your face is properly visible, 9. Refresh the page once more and wait for some time, as it may take a while for the updated profile picture to become visible to everyone."
+    },
+    {
+      "category": "Cliq Channel",
+      "question": "How can I use the Cliq Channel effectively?",
+      "answer": "Ask queries only in the designated Cliq channel. Reply only within the relevant thread, not in the main channel. Avoid direct messages unless explicitly instructed. Help peers whenever possible in the relevant thread to earn health points. Before posting a query, check recent threads to see if the same question has already been asked. While reacting to messages, use: 👍 to acknowledge a query as soon as it is submitted, ✅ to mark a query as resolved, 🔔 for FYI or informational updates, ➕ if you are facing the same issue. These practices help maintain clarity and ensure no updates are missed."
+    },
+    {
+      "category": "Cliq Channel",
+      "question": "I'm having issues with profile pictures on Cliq Channel. What should I do?",
+      "answer": "If you're facing profile picture issues, try these troubleshooting steps: For specific user profile picture issues: 1. Navigate to accounts.zoho.com, 2. Go to Settings, 3. Check whether the Profile Picture Visibility is set to 'Only users in my organization' or 'Everyone'. If you cannot see any user profile pictures: 1. Hard-refresh your browser and clear cookies and cache, 2. Follow this guide: https://help.codehs.com/en/articles/4951972-how-to-clear-your-browser-cache-and-hard-refresh. If issues still persist: This may be due to your data center being mapped to US instead of India. Send an email with detailed issue description to: support@zohocliq.com"
+    },
+    {
+      "category": "Cliq Channel",
+      "question": "Why is it mandatory to update my Display Picture (DP)?",
+      "answer": "Updating your DP with a clear photo of your face helps establish your identity in the community. This reduces risks such as impersonation, cyberbullying, and misuse of the platform, similar to showing an ID card in a physical organization."
+    },
+    {
+      "category": "Cliq Channel",
+      "question": "What kind of Display Picture is allowed?",
+      "answer": "Only original photographs clearly showing your face are allowed. GenAI-generated images, avatars, cartoons, logos, or group photos are not permitted."
+    },
+    {
+      "category": "MERN Case Studies",
+      "question": "What are Case Studies?",
+      "answer": "Case studies are the second required component (Advanced Learning) of the Pinternship program. They are well-structured, documentation-based lessons designed to help you apply what you learned in ViBe training through hands-on coding. Each case study focuses on real-world problem-solving, collaborative thinking, and practical implementation. Case studies are organized by technology, including: TypeScript Fundamentals, React Development, Express.js Backend, MongoDB Database. Each case study includes: Clear problem statements, Defined learning objectives, Step-by-step explanations, Practical coding tasks, Best practices and recommended patterns."
+    },
+    {
+      "category": "MERN Case Studies",
+      "question": "Are Case Studies mandatory?",
+      "answer": "Yes. Case studies are a required component for completing the Pinternship program. All participants must complete the case studies after finishing ViBe training and before moving to the Projects phase."
+    },
+    {
+      "category": "MERN Case Studies",
+      "question": "How do I get started with Case Studies?",
+      "answer": "After completing all ViBe MERN modules: 1. Click the Case Studies link in the navigation bar at the top of the page, 2. Select a technology and then choose a lesson, 3. Read the entire documentation carefully to understand the concept and tasks to be performed, 4. Try to understand each case study first, then attempt to code a solution for it, 5. Open a code editor (for example, VS Code) and implement the tasks, 6. Getting stuck is normal. You can ask questions on Cliq, revisit the ViBe videos, and discuss with others, 7. Submit your work using the provided submission link."
+    },
+    {
+      "category": "MERN Case Studies",
+      "question": "What comes after Case Studies?",
+      "answer": "After completing case studies, you move ahead to the Endorsement phase. The Self-healing endorsement network is a peer evaluation strategy that the learner needs to accomplish before getting into the next phase. The learner is expected to take an endorsement from a peer and move ahead to the third component: Practical Learning (Projects)."
+    },
+    {
+      "category": "MERN Case Studies",
+      "question": "How do I submit the case studies?",
+      "answer": "1. Visit the submission form (Will be updated soon), 2. Fill in all required details carefully, including: First name and last name, Email ID associated with the internship, Technology name and lesson number completed, 3. Upload the file containing your solution for the specific lesson (supported formats include .js, .ts, .txt, .zip, etc.), 4. Review your details and submit the form, 5. Repeat this process for each lesson you complete."
+    },
+    {
+      "category": "MERN Case Studies",
+      "question": "What should I do if a lesson contains multiple files?",
+      "answer": "For lessons (such as React) that involve multiple files, compress all related files into a single ZIP file and upload the ZIP file during submission."
+    },
+    {
+      "category": "MERN Case Studies",
+      "question": "Where can I get help if I am stuck with the case studies?",
+      "answer": "If you are facing difficulties, feel free to: Join the breakout rooms during Zoom sessions, Collaborate and discuss solutions with your peers. This collaborative approach is encouraged to enhance learning and problem-solving skills."
+    },
+    {
+      "category": "MERN Case Studies",
+      "question": "Where can I view my submission status and access the leaderboard and dashboard?",
+      "answer": "You can track your submission status, access the leaderboard, and view the dashboard by visiting the Pinternship Live Dashboard section on the website homepage."
+    },
+    {
+      "category": "MERN Case Studies",
+      "question": "What next if I completed my Case Studies and I am done with my endorsements?",
+      "answer": "We have some project ideas from the existing open source projects from Vicharanashala Lab for Education Design and Annam.AI listed on the Pinternship website. You can contribute to these real-time open-source projects, working with our developers to build real applications and add new features."
+    },
+    {
+      "category": "Ejection Policy",
+      "question": "What is the Ejection Policy?",
+      "answer": "The Ejection Policy is a structured mechanism designed to maintain a high-energy, focused learning environment. It ensures that the internship cohort consists of actively engaged participants who are consistently making progress. The policy promotes momentum, accountability, and fairness across the cohort."
+    },
+    {
+      "category": "Ejection Policy",
+      "question": "Why does the program have an Ejection Policy?",
+      "answer": "The policy exists to protect the learning ecosystem. Collaborative activities such as peer-to-peer viva sessions, case study discussions, and cohort-based learning are meaningful only when participants are equally invested. The Ejection Policy ensures that program resources are dedicated to committed learners and that prolonged disengagement does not dilute the experience for others."
+    },
+    {
+      "category": "Ejection Policy",
+      "question": "What are the types of ejection in this program?",
+      "answer": "There are two types of ejection: Forward Eject (The Ascent): Participants who consistently demonstrate exceptional performance, sustained momentum, and high engagement may be elevated to advanced opportunities such as leadership roles, advanced responsibilities, or fellowship considerations. Backward Eject (The Departure): Participants who remain persistently inactive or disengaged may be removed from the program to preserve the quality and seriousness of the cohort."
+    },
+    {
+      "category": "Ejection Policy",
+      "question": "What does 'Backward Eject' mean?",
+      "answer": "Backward Eject refers to the removal of a participant from the internship due to sustained inactivity. This ensures that collaborative learning activities are conducted among participants who are actively contributing and progressing."
+    },
+    {
+      "category": "Ejection Policy",
+      "question": "How is inactivity measured for Backward Ejection?",
+      "answer": "Backward Ejection is triggered only if both conditions are met simultaneously: 1. Your average daily progress on the ViBe platform falls below 3.33% per day, and 2. Your overall engagement level places you within the bottom 10% of the active cohort. This dual-condition check ensures fairness and prevents short-term slowdowns from being penalized."
+    },
+    {
+      "category": "Ejection Policy",
+      "question": "Is the ejection process manual or automated?",
+      "answer": "The process will be automated and data-driven. An algorithm objectively evaluates progress and cohort standing, ensuring transparency and eliminating subjective bias or manual intervention. Manual intervention at a higher level is currently in place to oversee the ejection and ensure correctness."
+    },
+    {
+      "category": "Ejection Policy",
+      "question": "Can I avoid being ejected from the program?",
+      "answer": "Yes. Maintaining steady progress above the minimum threshold and remaining actively engaged with the ViBe platform ensures that your position in the program remains secure."
+    },
+    {
+      "category": "Ejection Policy",
+      "question": "Is the Ejection Policy the same as the Discontinuation Policy?",
+      "answer": "No. The Discontinuation Policy addresses prolonged inactivity at an administrative level. The Ejection Policy is a real-time, algorithm-based mechanism focused on maintaining cohort momentum, engagement health, and learning quality."
+    },
+    {
+      "category": "Ejection Policy",
+      "question": "Can I appeal an ejection decision?",
+      "answer": "No. Ejection decisions are final and non-appealable, as they are based on objective, automated criteria applied uniformly across the cohort."
+    },
+    {
+      "category": "Ejection Policy",
+      "question": "Does being ejected affect future opportunities?",
+      "answer": "Backward Ejection removes you from the current cohort only. Forward Ejection, however, may open pathways to advanced leadership roles or fellowship nominations based on demonstrated excellence and reflective learning practices."
+    },
+    {
+      "category": "Self-Healing Endorsement Network",
+      "question": "What is the Self-Healing Endorsement Network?",
+      "answer": "The Self-Healing Endorsement Network is the official evaluation framework for the Case study activity completion for the learners. It is a peer-driven endorsement system where interns endorse each other's learning and contributions. All endorsements together form a connected endorsement network. For the network to remain valid: Every chain of endorsements must ultimately connect to a certified 'Jedi' (i.e., a Silver, Bronze, or Gold ticket holder), Any group of interns not connected to a Jedi forms a 'floating island', Floating islands are considered inactive, and endorsements within them will not be counted."
+    },
+    {
+      "category": "Self-Healing Endorsement Network",
+      "question": "Who are the Jedi and what role do they play?",
+      "answer": "A Jedi is an intern who holds a Silver, Bronze, or Gold ticket. Their role in the network: All endorsement paths must eventually link to a Jedi, Jedi act as anchors that validate and legitimize endorsement chains."
+    },
+    {
+      "category": "Self-Healing Endorsement Network",
+      "question": "Is endorsement mandatory to complete the internship?",
+      "answer": "Yes, every non-Jedi intern must receive one valid endorsement to successfully complete the internship. Important points: Endorsements must be completed within the given deadline, The final endorsement graph must not contain any floating islands, Interns who remain unendorsed or disconnected risk non-completion of the internship."
+    },
+    {
+      "category": "Self-Healing Endorsement Network",
+      "question": "How many endorsements can I receive or give?",
+      "answer": "Each intern can receive only one endorsement. An intern may endorse multiple other interns. There is no upper limit on how many endorsements you can give. However, a tree with greater length rather than breadth is encouraged to maintain strong, meaningful chains rather than shallow mass endorsements."
+    },
+    {
+      "category": "Self-Healing Endorsement Network",
+      "question": "When am I allowed to endorse someone?",
+      "answer": "You may endorse anyone at your discretion, after assessing them in any way you find appropriate. Recommended best practices: Interact with the intern before endorsing them, Ensure they demonstrate sufficient understanding of the MERN stack, ViBe course content, and case studies, Maintain a healthy and collaborative interaction — there is no hierarchy or superiority among co-interns, so please ensure that you interact with your co-interns in a friendly manner as peers. Important Warning: Endorsing someone with inadequate MERN fundamentals may trigger audit penalties for the entire tree or subtree connected to that endorsement."
+    },
+    {
+      "category": "Self-Healing Endorsement Network",
+      "question": "Can I endorse or be endorsed by someone from my own college?",
+      "answer": "Yes, this is allowed. However: Endorsements within the same institute may raise suspicion, Such connections have a higher probability of being audited by Bhavna ma'am. This is not prohibited, but interns are expected to endorse responsibly and ethically."
+    },
+    {
+      "category": "Self-Healing Endorsement Network",
+      "question": "How do audits work in the endorsement network?",
+      "answer": "Audits are conducted by Bhavna to identify interns who need improvement and work on Case studies before they get into the project phase. If a Needs Improvement intern is identified: The entire endorsement path connected to that intern is audited, A 50% health point penalty is applied to everyone in that connected group, The intern and anyone who fails the audit are removed from the network."
+    },
+    {
+      "category": "Self-Healing Endorsement Network",
+      "question": "What happens if I am certified as 'good' during an audit?",
+      "answer": "If an intern is certified as 'good' by Bhavna ma'am: They become eligible to be endorsed by anyone, even if they were previously disconnected, Their credibility and trust score within the network increases."
+    },
+    {
+      "category": "Self-Healing Endorsement Network",
+      "question": "What incentives exist within the endorsement network?",
+      "answer": "The network is intentionally designed to be self-healing and incentive-driven. Whenever a new intern joins a valid connected endorsement group: Every existing member receives a 5% health point increase. The increase is calculated as: 5% of their current health points, plus 5% of the new member's health points. This encourages: Formation of strong, connected networks, Avoidance of risky or isolated endorsement chains."
+    },
+    {
+      "category": "Self-Healing Endorsement Network",
+      "question": "What data is used to manage endorsements?",
+      "answer": "Endorsements are tracked using a three-column dataset: Member 1 → the endorser, Member 2 → the endorsed intern, Action → endorsement or de-endorsement. Possible actions: Add → Member 1 endorsed Member 2, Delete → Member 1 de-endorsed Member 2, Needs Improvement → Member 1 belongs to Needs Improvement category, Member 2 is the parent in the chain. This dataset is used to: Track endorsement paths, Detect floating islands, Conduct audits efficiently."
+    },
+    {
+      "category": "Self-Healing Endorsement Network",
+      "question": "How do I submit endorsements?",
+      "answer": "All endorsements and de-endorsements must be submitted through the official Google Form (TBD). The form contains mandatory sections: 1. Endorser's Name and Email, 2. Endorsed Person's Name and Email, 3. Endorsement Status (Added for endorsement, Deleted for de-endorsement), 4. Remarks (Write short, honest remarks based on your assessment). Important Guidelines: The form should be filled only once per endorsement, The endorser should fill the form, Avoid duplicate or reciprocal entries."
+    },
+    {
+      "category": "Self-Healing Endorsement Network",
+      "question": "What should interns keep in mind while endorsing others?",
+      "answer": "Avoid careless, bulk, or reciprocal endorsements. Ensure your endorsement chain connects to a Jedi. Endorse based on knowledge, effort, and contribution. Be mindful that poor endorsements can cause audit cascades. The Self-Healing Endorsement Network rewards integrity, collaboration, responsibility, and accountability."
+    }
+  ]
+}
