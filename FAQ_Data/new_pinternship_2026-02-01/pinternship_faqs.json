@@ -1,0 +1,339 @@
+{
+  "source": "FAQ.md (Local)",
+  "migration_date": "2026-02-01",
+  "program": "Pinternship - VLED Lab, IIT Ropar",
+  "total_faqs": 66,
+  "categories": 11,
+  "faqs": [
+    {
+      "category": "Internship Overview",
+      "question": "What is this internship about?",
+      "answer": "Vinternship is organized by VLED Lab at the Indian Institute of Technology Ropar in online mode. It's a comprehensive full-stack development internship program focused on the MERN stack (MongoDB, Express.js, React, Node.js/TypeScript)."
+    },
+    {
+      "category": "Internship Overview",
+      "question": "Is this internship time-bound or duration-based?",
+      "answer": "The internship follows a structured timeline with specific milestones and deliverables. The maximum duration of the internship is 2.5 months."
+    },
+    {
+      "category": "Internship Overview",
+      "question": "What is the mode of this internship?",
+      "answer": "The internship will be conducted in **online mode only**."
+    },
+    {
+      "category": "Internship Overview",
+      "question": "Are there fixed timings for live sessions?",
+      "answer": "The program includes scheduled live sessions, workshops, and mentorship meetings. The timings for these sessions will be conveyed well in advance."
+    },
+    {
+      "category": "Internship Overview",
+      "question": "Where can I find the Internship ID?",
+      "answer": "The Internship ID will be mentioned in the offer letter sent by NPTEL POC."
+    },
+    {
+      "category": "Mode of Internship & Attendance",
+      "question": "Can we opt for an on-campus/offline internship?",
+      "answer": "The program will be conducted strictly in **online mode**."
+    },
+    {
+      "category": "Mode of Internship & Attendance",
+      "question": "Is attendance tracked in this internship?",
+      "answer": "Attendance is compulsory for all the standups, please check your Cohort page on the landing page for days and timing of standup for your cohort. Attendance is tracked for all the live session activities. Attendance will be counted **only if your camera remains ON for the entire Zoom session**. If the camera is not switched on for a sustained duration, the session may **not be considered as full attendance**."
+    },
+    {
+      "category": "Mode of Internship & Attendance",
+      "question": "Do I need to use a specific name or email for the internship?",
+      "answer": "Yes. You must use the **same name and email ID** used during registration across all platforms (ViBe, GitHub, Zoom etc.) for automated tracking of your progress."
+    },
+    {
+      "category": "Mode of Internship & Attendance",
+      "question": "Can I use my college or non-Gmail email ID for registration?",
+      "answer": "No. This is VERY IMPORTANT.\n->You must register using a Gmail ID (@gmail.com).\n->Non-Gmail IDs will not be registered\n->Even college Google Workspace emails may cause issues\n👉 Please ensure you use a personal @gmail.com address while registering."
+    },
+    {
+      "category": "Mode of Internship & Attendance",
+      "question": "Should I fill the attendance form attached to the NPTEL offer letter?",
+      "answer": "Yes. You must fill the **Google Form provided in the NPTEL offer letter** **every day** during your internship (**except Sundays**).\nGuidelines:\n- Fill in all required details **daily**\n- The form should be preferably filled **in the evening**, after completing the day’s work\n- This form is **mandatory** for marking your attendance on **NPTEL’s side** throughout the internship\n- Any other questions regarding the same can be mailed to the NPTEL team for clarity\nPlease ensure that the form is filled **daily** going forward to avoid missing attendance again."
+    },
+    {
+      "category": "Mode of Internship & Attendance",
+      "question": "I forgot to fill the attendance sheet attached to the NPTEL offer letter yesterday. What should I do now?",
+      "answer": "Unfortunately, there is nothing that can be done, as the form is used for NPTEL’s official database and attendance cannot be recorded for the previous day. The previous day will be considered as a leave."
+    },
+    {
+      "category": "Mode of Internship & Attendance",
+      "question": "How can I avail the one-day leave allowed every month during the internship?",
+      "answer": "Taking leave is **discouraged**, as you may miss important updates shared during live sessions or fall behind in your progress. It will be **your own responsibility** to complete the work missed on the leave day.\nHowever, if you must take the leave, follow the steps below:\n- Write a mail to the **Support Desk** stating the reason for your leave\n- Clearly mention:\n- The **reason** for the leave\n- The **exact date** on which you intend to take the leave\nOnce submitted, the request will be reviewed and processed by the team.\nNOTE: No Holidays are provided!"
+    },
+    {
+      "category": "Mentorship & Guidance",
+      "question": "Will the course instructor supervise our work directly?",
+      "answer": "The instructor **may interact** with participants depending on project requirements.\nMentors and coordinators will engage via **live sessions** and **forums**."
+    },
+    {
+      "category": "Mentorship & Guidance",
+      "question": "Do we get to meet our mentors?",
+      "answer": "Yes, your project mentors can schedule a meeting based on the doubts and issues you are facing in the projects or in the learning phase."
+    },
+    {
+      "category": "Support and Resolution Protocol",
+      "question": "Where do I raise my concern initially?",
+      "answer": "Initially, try to get your query resolved from the FAQ. Check the Broadcast Telegram channel, else from your fellow interns in the Breakout sessions. If the query is still not resolved, you can email your query to the email ID below.\nEmail **vinternship@vicharanashala.zohodesk.in**.\nResponses are provided **within 2 hours** between **9:00 AM and 9:00 PM**.\nAny question submitted beyond 9 PM will be answered the next day."
+    },
+    {
+      "category": "Support and Resolution Protocol",
+      "question": "What if I don’t receive a response in 24 hours?",
+      "answer": "If you do not receive a response within 24 hours, you may raise a second ticket.\nIn the subject line, mention: \"Attention Please – Follow-up on Ticket #[Original Ticket Number]\"\nThis ticket will be escalated to our Mentors Team, who will reach out to you for a voice call discussion and try to resolve the issue directly."
+    },
+    {
+      "category": "Support and Resolution Protocol",
+      "question": "If my concern still isn’t addressed, how do I escalate further?",
+      "answer": "After 48 hours of your first ticket (and after raising a follow-up), you can escalate the matter via email to the Internship Sponsor, with CC to Prof. Sudarshan Iyengar directly with the following recipients in CC:\n->Your department’s faculty reference\n->Your department HOD\n->The VLED Team at dled@iitrpr.ac.in"
+    },
+    {
+      "category": "Support and Resolution Protocol",
+      "question": "Is this process mandatory for all issues?",
+      "answer": "Yes, to maintain consistency and ensure efficient support, we request all interns to follow this three-step resolution path."
+    },
+    {
+      "category": "Completion & Certification",
+      "question": "What are the program completion criteria?",
+      "answer": "- Completion of all course modules on the Learning platform. (Required)\n- Completion of case studies provided for learning using the code. (Required)\n- Completion of Viva/endorsement for the Case Study.\n- Contribution to real-time applications or projects."
+    },
+    {
+      "category": "Completion & Certification",
+      "question": "Where can I find information on certification?",
+      "answer": "NPTEL interns should contact the NPTEL internship team for the information regarding certificates."
+    },
+    {
+      "category": "Completion & Certification",
+      "question": "Will recommendation letters be provided?",
+      "answer": "Recommendation letters are not guaranteed. You may request one from the course instructor after completing the internship, and it will be at their discretion based on the performance of the candidate."
+    },
+    {
+      "category": "Discontinuation Policy",
+      "question": "What is the expected pace of learning?",
+      "answer": "You are expected to maintain steady progress through all three required components with well-defined milestones: Core Learning (ViBe Training), Advanced Learning (Case Studies), and Practical Learning (Projects). You should work through the modules consistently to ensure continuous engagement and build momentum in your learning journey."
+    },
+    {
+      "category": "Discontinuation Policy",
+      "question": "What happens if I don't maintain regular progress?",
+      "answer": "If you remain inactive or fail to make reasonable progress over an extended period, we may discontinue your access to the program. The program has a 2-month duration with a possible 15-day extension based on individual circumstances. This policy helps ensure that active learners have the best support and resources."
+    },
+    {
+      "category": "Discontinuation Policy",
+      "question": "Can I appeal a discontinuation decision?",
+      "answer": "No, discontinuation decisions are **final** and cannot be appealed if the attendance or milestone requirements are not met."
+    },
+    {
+      "category": "Discontinuation Policy",
+      "question": "Can I rejoin the program after discontinuation?",
+      "answer": "No, once discontinued, you cannot rejoin the current program. You would need to apply afresh for any future program offerings, subject to availability."
+    },
+    {
+      "category": "Discontinuation Policy",
+      "question": "How does the Discontinuation Policy differ from the Ejection Policy?",
+      "answer": "The Discontinuation Policy addresses prolonged inactivity at an administrative level, while the Ejection Policy (see Section 10) is a real-time, algorithm-based mechanism focused on maintaining cohort momentum and learning quality."
+    },
+    {
+      "category": "ViBe Platform",
+      "question": "How do I log in to ViBe?",
+      "answer": "To log in to the ViBe platform, follow the steps below carefully:\n1. Open the ViBe invite link shared with you via email.\n2. Click Continue as Student when prompted.\n3. Select Continue with Google.\n4. Ensure you sign in using the same email ID (college email / registered email) that received the invite.\n5. Once authenticated, you will be redirected to your ViBe Dashboard, where your enrolled course will be visible.\n⚠️ Logging in with a different email ID may result in access issues or missing course visibility."
+    },
+    {
+      "category": "ViBe Platform",
+      "question": "Invite accepted but shows \"No course enrolled\"?",
+      "answer": "If you see “No course enrolled”:\n- Make sure you are logged in with the correct registered email ID.\n- Check if your college email has multiple aliases and try the correct one.\n- Log out and log in again once.\n- If the issue continues, contact support with your registered email ID and a screenshot."
+    },
+    {
+      "category": "ViBe Platform",
+      "question": "Why are videos stuck or repeating?",
+      "answer": "This may happen due to ViBe’s monitored learning system. Common reasons include:\n- Videos must be watched fully and in sequence (no skipping).\n- Camera and microphone permissions must be enabled.\n- Poor lighting or high background noise can affect playback.\n- Switching tabs or staying idle may restart the video.\n✅ For smooth playback, stay on the ViBe tab, keep your camera on, and watch videos in a quiet, well-lit environment."
+    },
+    {
+      "category": "ViBe Platform",
+      "question": "Can I use a mobile or tablet?",
+      "answer": "No, only **desktop/laptop** is supported."
+    },
+    {
+      "category": "ViBe Platform",
+      "question": "I'm experiencing video issues (stuck, looping, skipping) on ViBe. How do I troubleshoot?",
+      "answer": "Try these troubleshooting steps in order:\n1. **Refresh the page** and check multiple times\n2. **Inspect browser console**: Right-click → Inspect → Go to Network or Console tab → Try watching the video and check for any visible errors\n3. **Log out and log in again**\n4. **Use a different browser**\n5. **Clear browsing data and cache**, then try to re-login\nIf the issue persists after trying all steps, **record the issue** and email it to: **vinternship@vicharanashala.zohodesk.in**."
+    },
+    {
+      "category": "ViBe Platform",
+      "question": "I have completed all videos and quizzes in the ViBe course, but my progress is still showing less than 100%. What should I do?",
+      "answer": "Please do not worry. This is a **dashboard-level technical issue** that has already been acknowledged by the support team and communicated. The team is actively working on resolving it, and your progress will be **updated automatically** once the issue is fixed.\nIn the meantime, you may try the following steps once:\n1. **Refresh your browser**\n2. **Log out**, clear your browser cache, and **log in again**\nIf the issue still persists after these steps, no further action is required from your side. Your course completion status will be corrected by the support team shortly."
+    },
+    {
+      "category": "ViBe Platform",
+      "question": "I feel the ViBe content or platform is not good or I am unhappy with the way progress is evaluated. Can I request an exception or bypass the system?",
+      "answer": "ViBe is built and continuously improved by interns and students themselves. It is a free and open-source learning platform, and our goal is to keep it that way by encouraging the community to actively contribute, improve, and strengthen it rather than bypass it.\nIf a learner strongly feels that the regular ViBe flow does not fairly reflect their understanding, there is a formal alternative evaluation path. However, this path is intentionally rigorous to ensure fairness for everyone.\nIn such cases, you will be asked to:\n- Watch the specified YouTube video content completely (links will be provided).\n- Appear for a three-hour proctored examination based only on that content.\n- Write the exam under strict supervision with:\n- Two cameras (front and side view), and\n- One online human proctor monitoring you live.\nThis examination becomes the sole basis for evaluation in place of the regular internship track.\nThe scoring rules are strict:\n- **Score below 60%**: You are considered not qualified and must join the next cohort and continue only through the normal ViBe mode.\n- **Score between 60% and 80%**: You get one more chance in the next scheduled exam.\n- **Score above 80%**: You are considered to have passed.\nThis special exam is conducted once every fortnight, so choosing this route may significantly delay your progress compared to continuing normally on ViBe.\nBecause this path is far more demanding and time-consuming than simply completing the regular videos, quizzes, and activities, most students find that continuing with the standard ViBe workflow is the faster and better option."
+    },
+    {
+      "category": "MERN Case Studies",
+      "question": "What are Case Studies?",
+      "answer": "Case studies are the **second required component** (Advanced Learning) of the Vinternship program. They are well-structured, documentation-based lessons designed to help you apply what you learned in ViBe training through **hands-on coding**. Each case study focuses on real-world problem-solving, collaborative thinking, and practical implementation to help you become more confident with the technologies covered.\nCase studies are organized by technology, including:\n- TypeScript Fundamentals\n- React Development\n- Express.js Backend\n- MongoDB Database\nEach case study includes:\n- Clear problem statements\n- Defined learning objectives\n- Step-by-step explanations\n- Practical coding tasks\n- Best practices and recommended patterns"
+    },
+    {
+      "category": "MERN Case Studies",
+      "question": "Are Case Studies mandatory?",
+      "answer": "Yes. Case studies are a **required component** for completing the Vinternship program. All participants must complete the case studies after finishing ViBe training and before moving to the Projects phase."
+    },
+    {
+      "category": "MERN Case Studies",
+      "question": "How do I get started with Case Studies?",
+      "answer": "After completing all ViBe MERN modules:\n1. Click the **Case Studies** link in the navigation bar at the top of the page.\n2. Select a **technology** and then choose a **lesson**.\n3. Read the entire documentation carefully to understand the concept and tasks to be performed.\n4. Try to understand each case study first, then attempt to code a solution for it.\n5. Open a code editor (for example, **VS Code**) and implement the tasks.\n5. Getting stuck is normal. You can ask queries to the support desk, revisit the ViBe videos, and discuss with others.\n7. Submit your work using the submission link provided on your cohort specific page."
+    },
+    {
+      "category": "MERN Case Studies",
+      "question": "What comes after Case Studies?",
+      "answer": "After completing case studies, you move ahead to the Endorsement phase. The Self-healing endorsement network is a peer evaluation strategy that the learner needs to accomplish before getting into the next phase. The learner is expected to take an endorsement from a peer and move ahead to the third component that is **Practical Learning (Projects)**. Please visit - [The Self-Healing Endorsement Network page]({{ site.baseurl }}/endorsements/) to learn more about endorsements."
+    },
+    {
+      "category": "MERN Case Studies",
+      "question": "How do I submit the case studies?",
+      "answer": "1. Visit the submission form provided in your cohort specific pages.\n2. Fill in all required details carefully, including:\n- First name and last name\n- Email ID associated with the internship\n- Technology name and lesson number completed\n3. Upload the file containing your solution for the specific lesson\n(supported formats include `.js`, `.ts`, `.txt`, `.zip`, etc.)\n4. Review your details and submit the form.\n5. Repeat this process for **each lesson** you complete."
+    },
+    {
+      "category": "MERN Case Studies",
+      "question": "What should I do if a lesson contains multiple files?",
+      "answer": "For lessons (such as React) that involve **multiple files**, compress all related files into a **single ZIP file** and upload the ZIP file during submission."
+    },
+    {
+      "category": "MERN Case Studies",
+      "question": "Where can I get help if I am stuck with the case studies?",
+      "answer": "If you are facing difficulties, feel free to:\n- Join the **breakout rooms** during Zoom sessions\n- Collaborate and discuss solutions with your peers\nThis collaborative approach is encouraged to enhance learning and problem-solving skills."
+    },
+    {
+      "category": "MERN Case Studies",
+      "question": "Where can I view my submission status and access the leaderboard and dashboard?",
+      "answer": "You can track your submission status, access the leaderboard, and view the dashboard by visiting the Vinternship Live Dashboard section on your cohort specific page."
+    },
+    {
+      "category": "MERN Case Studies",
+      "question": "What next if I completed my Case Studies and I am done with my endorsements?",
+      "answer": "We have some project ideas from the existing open source projects from Vicharanashala Lab for Education Design and Annam.AI listed on the Vinternship website. You can contribute to these real-time open-source projects, working with our developers to build real applications and add new features."
+    },
+    {
+      "category": "Ejection Policy",
+      "question": "What is the Ejection Policy?",
+      "answer": "The Ejection Policy is a structured mechanism designed to maintain a high-energy, focused learning environment. It ensures that the internship cohort consists of actively engaged participants who are consistently making progress. The policy promotes momentum, accountability, and fairness across the cohort."
+    },
+    {
+      "category": "Ejection Policy",
+      "question": "Why does the program have an Ejection Policy?",
+      "answer": "The policy exists to protect the learning ecosystem. Collaborative activities such as peer-to-peer viva sessions, case study discussions, and cohort-based learning are meaningful only when participants are equally invested. The Ejection Policy ensures that program resources are dedicated to committed learners and that prolonged disengagement does not dilute the experience for others."
+    },
+    {
+      "category": "Ejection Policy",
+      "question": "What are the types of ejection in this program?",
+      "answer": "There are **two types of ejection**:\n- **Forward Eject (The Ascent):**\nParticipants who consistently demonstrate exceptional performance, sustained momentum, and high engagement may be elevated to advanced opportunities such as leadership roles, advanced responsibilities, or fellowship considerations.\n- **Backward Eject (The Departure):**\nParticipants who remain persistently inactive or disengaged may be removed from the program to preserve the quality and seriousness of the cohort."
+    },
+    {
+      "category": "Ejection Policy",
+      "question": "What does “Backward Eject” mean?",
+      "answer": "Backward Eject refers to the removal of a participant from the internship due to sustained inactivity. This ensures that collaborative learning activities are conducted among participants who are actively contributing and progressing."
+    },
+    {
+      "category": "Ejection Policy",
+      "question": "How is inactivity measured for Backward Ejection?",
+      "answer": "Backward Ejection is triggered **only if both conditions are met simultaneously**:\n1. Your average daily progress on the ViBe platform falls **below 3.33% per day**, **and**\n2. Your overall engagement level places you within the **bottom 10% of the active cohort**.\nThis dual-condition check ensures fairness and prevents short-term slowdowns from being penalized."
+    },
+    {
+      "category": "Ejection Policy",
+      "question": "Is the ejection process manual or automated?",
+      "answer": "The process will be **automated and data-driven**. An algorithm objectively evaluates progress and cohort standing, ensuring transparency and eliminating subjective bias or manual intervention. Manual intervention at a higher level is currently in place to oversee the ejection and ensure correctness."
+    },
+    {
+      "category": "Ejection Policy",
+      "question": "Can I avoid being ejected from the program?",
+      "answer": "Yes. Maintaining steady progress above the minimum threshold and remaining actively engaged with the ViBe platform ensures that your position in the program remains secure."
+    },
+    {
+      "category": "Ejection Policy",
+      "question": "Is the Ejection Policy the same as the Discontinuation Policy?",
+      "answer": "No. The **Discontinuation Policy** addresses prolonged inactivity at an administrative level. The **Ejection Policy** is a real-time, algorithm-based mechanism focused on maintaining cohort momentum, engagement health, and learning quality."
+    },
+    {
+      "category": "Ejection Policy",
+      "question": "Can I appeal an ejection decision?",
+      "answer": "No. Ejection decisions are **final and non-appealable**, as they are based on objective, automated criteria applied uniformly across the cohort."
+    },
+    {
+      "category": "Ejection Policy",
+      "question": "Does being ejected affect future opportunities?",
+      "answer": "Backward Ejection removes you from the current cohort only. Forward Ejection, however, may open pathways to advanced leadership roles or fellowship nominations based on demonstrated excellence and reflective learning practices."
+    },
+    {
+      "category": "Self-Healing Endorsement Network - Viva/Peer Evaluation System(PES)",
+      "question": "What is the Self-Healing Endorsement Network?",
+      "answer": "The **Self-Healing Endorsement Network** is the official evaluation framework for the Case study activity completion for the learners.\nIt is a **peer-driven endorsement system** where interns endorse each other’s learning and contributions. All endorsements together form a **connected endorsement network**.\nFor the network to remain valid:\n- Every chain of endorsements must **ultimately connect to a certified “Jedi”** (i.e., a **Silver, Bronze, or Gold ticket holder**)\n- Any group of interns not connected to a Jedi forms a **floating island**\n- Floating islands are considered **inactive**, and endorsements within them **will not be counted**"
+    },
+    {
+      "category": "Self-Healing Endorsement Network - Viva/Peer Evaluation System(PES)",
+      "question": "Who are the Jedi and what role do they play?",
+      "answer": "A **Jedi** is an intern who holds a **Silver, Bronze, or Gold ticket**.\nTheir role in the network:\n- All endorsement paths must **eventually link to a Jedi**\n- Jedi act as **anchors** that validate and legitimize endorsement chains"
+    },
+    {
+      "category": "Self-Healing Endorsement Network - Viva/Peer Evaluation System(PES)",
+      "question": "Is endorsement mandatory to complete the internship?",
+      "answer": "Yes, **every non-Jedi intern must receive one valid endorsement** to successfully complete the internship.\nImportant points:\n- Endorsements **must be completed within the given deadline**\n- The final endorsement graph must **not contain any floating islands**\n- Interns who remain **unendorsed or disconnected** risk **non-completion of the internship**"
+    },
+    {
+      "category": "Self-Healing Endorsement Network - Viva/Peer Evaluation System(PES)",
+      "question": "How many endorsements can I receive or give?",
+      "answer": "- Each intern can **receive only one endorsement**\n- An intern may **endorse multiple other interns**\n- There is **no upper limit** on how many endorsements you can give\nHowever, a **tree with greater length rather than breadth** is encouraged to maintain strong, meaningful chains rather than shallow mass endorsements."
+    },
+    {
+      "category": "Self-Healing Endorsement Network - Viva/Peer Evaluation System(PES)",
+      "question": "When am I allowed to endorse someone?",
+      "answer": "You may endorse anyone **at your discretion**, after assessing them in any way you find appropriate.\nRecommended best practices:\n- Interact with the intern before endorsing them\n- Ensure they demonstrate **sufficient understanding of the MERN stack**, **ViBe course content**, and **case studies**\n- Maintain a **healthy and collaborative interaction** — there is **no hierarchy or superiority** among co-interns, so please ensure that you interact with your co-interns in a friendly manner as peers\n⚠️ **Important Warning:**\nEndorsing someone with **inadequate MERN fundamentals** may trigger **audit penalties** for the **entire tree or subtree** connected to that endorsement."
+    },
+    {
+      "category": "Self-Healing Endorsement Network - Viva/Peer Evaluation System(PES)",
+      "question": "Can I endorse or be endorsed by someone from my own college?",
+      "answer": "Yes, this is **allowed**.\nHowever:\n- Endorsements within the **same institute may raise suspicion**\n- Such connections have a **higher probability of being audited** by **Bhavna ma’am**\nThis is **not prohibited**, but interns are expected to endorse **responsibly and ethically**."
+    },
+    {
+      "category": "Self-Healing Endorsement Network - Viva/Peer Evaluation System(PES)",
+      "question": "How do audits work in the endorsement network?",
+      "answer": "Audits are conducted by **Bhavna** to identify interns who need improvement and work on Case studies before they get into the project phase.\nIf a **Needs Improvement** intern is identified:\n- The **entire endorsement path** connected to that intern is audited\n- A **50% health point penalty** is applied to everyone in that connected group\n- The **intern and anyone who fails the audit** are **removed from the network**"
+    },
+    {
+      "category": "Self-Healing Endorsement Network - Viva/Peer Evaluation System(PES)",
+      "question": "What happens if I am certified as “good” during an audit?",
+      "answer": "If an intern is certified as **“good”** by Bhavna ma’am:\n- They become **eligible to be endorsed by anyone**, even if they were previously disconnected\n- Their **credibility and trust score** within the network increases"
+    },
+    {
+      "category": "Self-Healing Endorsement Network - Viva/Peer Evaluation System(PES)",
+      "question": "What incentives exist within the endorsement network?",
+      "answer": "The network is intentionally designed to be **self-healing and incentive-driven**.\nWhenever a new intern joins a **valid connected endorsement group**:\n- Every existing member receives a **5% health point increase**\n- The increase is calculated as:\n- **5% of their current health points**, plus\n- **5% of the new member’s health points**\nThis encourages:\n- Formation of **strong, connected networks**\n- Avoidance of risky or isolated endorsement chains"
+    },
+    {
+      "category": "Self-Healing Endorsement Network - Viva/Peer Evaluation System(PES)",
+      "question": "What data is used to manage endorsements?",
+      "answer": "Endorsements are tracked using a **three-column dataset**:\n- **Member 1** → the endorser\n- **Member 2** → the endorsed intern\n- **Action** → endorsement or de-endorsement\nPossible actions:\n- **Add** → Member 1 endorsed Member 2\n- **Delete** → Member 1 de-endorsed Member 2\n- **Needs Improvement** → Member 1 belongs to the Needs Improvement category, Member 2 is the parent in the chain\nThis dataset is used to:\n- Track endorsement paths\n- Detect floating islands\n- Conduct audits efficiently"
+    },
+    {
+      "category": "Self-Healing Endorsement Network - Viva/Peer Evaluation System(PES)",
+      "question": "How do I submit endorsements? (Google Form instructions)",
+      "answer": "All endorsements and de-endorsements must be submitted through the **official Google Form**:\n🔗 **Endorsement Form Link:**  Check on your Cohort specific page which you can access from the homepage.\nThe form contains **mandatory sections**:\n1. **Endorser’s Name and Email**\n2. **Endorsed Person’s Name and Email**\n3. **Endorsement Status**\n- `Added` → for endorsement\n- `Deleted` → for de-endorsement\n4. **Remarks**\n- Write short, honest remarks based on your assessment\n📌 **Important Guidelines:**\n- The form should be filled **only once per endorsement**\n- The **endorser** should fill the form\n- Avoid duplicate or reciprocal entries\n<!-- ⏳ **Deadline:**\nYET TO BE ANNOUNCED**. -->"
+    },
+    {
+      "category": "Self-Healing Endorsement Network - Viva/Peer Evaluation System(PES)",
+      "question": "What should interns keep in mind while endorsing others?",
+      "answer": "- Avoid careless, bulk, or reciprocal endorsements\n- Ensure your endorsement chain **connects to a Jedi**\n- Endorse based on **knowledge, effort, and contribution**\n- Be mindful that poor endorsements can cause **audit cascades**\nThe Self-Healing Endorsement Network rewards **integrity, collaboration, responsibility, and accountability**.\n<!-- **11.13 Will Bhavna ma’am conduct Viva sessions in the future so that interns can become Jedi (Bronze ticket holders)?**\nNo, Bhavna ma'am will unfortunately **not conduct Viva sessions anymore**. She will only perform audit checks in the form of viva to identify defaulters/anomalies.\nEarlier, clearing the Viva conducted by Bhavna ma’am allowed interns to become **Bronze ticket holders**. Since this process has now been discontinued, the **set of existing Jedi (Silver, Bronze, and Gold ticket holders) is fixed**.\nNo new Jedi will be added through Viva going forward. -->"
+    },
+    {
+      "category": "Health Points",
+      "question": "How do I access my Individual Health Points (HP) page?",
+      "answer": "You can view your Individual Health Points by following these steps:\n- Go to: https://sudarshansudarshan.github.io/vinternship/\n- Navigate to your Cohort-specific page\n- In the Dashboard section, click Open Dashboard\n- Select the Health Points tab\n- Choose Individual HP\nThis section displays your personal Health Points status."
+    },
+    {
+      "category": "Health Points",
+      "question": "Where can I find activity deadlines (ViBe / Case Study)?",
+      "answer": "All activity deadlines are available directly on the dashboard:\n- Go to: https://sudarshansudarshan.github.io/vinternship/\n- Navigate to your Cohort-specific page\n- In the Dashboard section, click Open Dashboard\n- Select the Health Points tab\n- Choose Individual HP\n👉 The respective deadlines are shown under each activity inside the dashboard and cohort specific pages."
+    }
+  ]
+}

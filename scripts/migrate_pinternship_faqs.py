@@ -32,10 +32,10 @@ EMBEDDING_MODEL = 'BAAI/bge-large-en-v1.5'
 # Check if running in Docker container (script is in /app/)
 if Path('/app/FAQ_Data').exists():
     # Running in Docker container
-    FAQ_DATA_FILE = Path('/app/FAQ_Data/new_pinternship_2026-01-24/pinternship_faqs.json')
+    FAQ_DATA_FILE = Path('/app/FAQ_Data/new_pinternship_2026-02-01/pinternship_faqs.json')
 else:
     # Running locally (relative to script location)
-    FAQ_DATA_FILE = Path(__file__).parent.parent / 'FAQ_Data' / 'new_pinternship_2026-01-24' / 'pinternship_faqs.json'
+    FAQ_DATA_FILE = Path(__file__).parent.parent / 'FAQ_Data' / 'new_pinternship_2026-02-01' / 'pinternship_faqs.json'
 
 
 def load_faq_data():
@@ -62,7 +62,8 @@ def generate_question_id(category: str, question_num: int) -> str:
         "Cliq Channel": 8,
         "MERN Case Studies": 9,
         "Ejection Policy": 10,
-        "Self-Healing Endorsement Network": 11,
+        "Self-Healing Endorsement Network - Viva/Peer Evaluation System(PES)": 11,
+        "Health Points": 12,
     }
     
     category_num = category_map.get(category, 99)

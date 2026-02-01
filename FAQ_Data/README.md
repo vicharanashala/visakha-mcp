@@ -14,7 +14,10 @@ FAQ_Data/
 ├── new_pinternship_2026-01-19/       # Pinternship FAQ data v1 (68 FAQs)
 │   └── pinternship_faqs.json
 │
-└── new_pinternship_2026-01-24/       # Pinternship FAQ data v2 (71 FAQs)
+├── new_pinternship_2026-01-24/       # Pinternship FAQ data v2 (71 FAQs)
+│   └── pinternship_faqs.json
+│
+└── new_pinternship_2026-02-01/       # Pinternship FAQ data v3 (66 FAQs)
     └── pinternship_faqs.json         # Active Source Data
 ```
 
@@ -27,11 +30,11 @@ To migrate FAQ data to MongoDB:
 python scripts/migrate_pinternship_faqs.py
 
 # Or via Docker
-docker exec faq-mcp-server python migrate_pinternship_faqs.py
+docker exec faq-mcp-server python scripts/migrate_pinternship_faqs.py
 ```
 
 The script will:
-1. Load FAQ data from `new_pinternship_2026-01-24/pinternship_faqs.json`
+1. Load FAQ data from `new_pinternship_2026-02-01/pinternship_faqs.json`
 2. Clear existing MongoDB data
 3. Generate embeddings using BGE-large-en-v1.5
    - **Note**: Embeddings are generated from combined `question + answer` text for better semantic search accuracy
@@ -61,7 +64,7 @@ To add new FAQ data:
 
 ## Current Data
 
-**Active**: new_pinternship_2026-01-24 (71 FAQs, 11 categories)
+**Active**: new_pinternship_2026-02-01 (66 FAQs, 11 categories)
 - Pinternship program by VLED Lab, IIT Ropar
-- Source: https://github.com/sudarshansudarshan/pinternship/blob/main/Faq.md
+- Source: Local FAQ.md
 - Combined text embeddings enabled
