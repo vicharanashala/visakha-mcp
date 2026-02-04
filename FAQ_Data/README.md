@@ -14,10 +14,14 @@ FAQ_Data/
 ├── new_pinternship_2026-01-19/       # Pinternship FAQ data v1 (68 FAQs)
 │   └── pinternship_faqs.json
 │
+FAQ_Data/
 ├── new_pinternship_2026-01-24/       # Pinternship FAQ data v2 (71 FAQs)
 │   └── pinternship_faqs.json
 │
-└── new_pinternship_2026-02-01/       # Pinternship FAQ data v3 (66 FAQs)
+├── new_pinternship_2026-02-01/       # Pinternship FAQ data v3 (66 FAQs)
+│   └── pinternship_faqs.json
+│
+└── new_pinternship_2026-02-04/       # Pinternship FAQ data v4 (73 FAQs)
     └── pinternship_faqs.json         # Active Source Data
 ```
 
@@ -26,19 +30,25 @@ FAQ_Data/
 To migrate FAQ data to MongoDB:
 
 ```bash
-# Run migration script
-python scripts/migrate_pinternship_faqs.py
+# Run migration script via automation controller (Recommended)
+python3 scripts/automate_faq_update.py
 
-# Or via Docker
+# Or manually via Docker
 docker exec faq-mcp-server python scripts/migrate_pinternship_faqs.py
 ```
 
-The script will:
-1. Load FAQ data from `new_pinternship_2026-02-01/pinternship_faqs.json`
-2. Clear existing MongoDB data
-3. Generate embeddings using BGE-large-en-v1.5
-   - **Note**: Embeddings are generated from combined `question + answer` text for better semantic search accuracy
-4. Insert new FAQs into MongoDB
+## Automation (New)
+
+You can now automate the entire update process from a local `FAQ.md` file:
+
+```bash
+python3 scripts/automate_faq_update.py FAQ.md
+```
+
+This script will:
+1. Parse the Markdown file
+2. Generate the JSON dataset with automatically assigned category IDs
+3. Deploy to Docker and execute migration in one step
 
 ## Data Format
 
@@ -47,24 +57,11 @@ The JSON file contains:
 - **migration_date**: Date of migration
 - **program**: Program name
 - **total_faqs**: Total number of FAQs
-- **categories**: Number of categories
-- **faqs**: Array of FAQ objects with:
-  - `category`: FAQ category
-  - `question`: Question text
-  - `answer`: Answer text
-
-## Adding New FAQ Data
-
-To add new FAQ data:
-
-1. Create a new dated folder: `FAQ_Data/new_program_YYYY-MM-DD/`
-2. Add FAQ data as JSON file following the format in `pinternship_faqs.json`
-3. Update `FAQ_DATA_FILE` path in `scripts/migrate_pinternship_faqs.py`
-4. Run migration script
+- **faqs**: Array of FAQ objects with `category_id`, `question`, `answer`.
 
 ## Current Data
 
-**Active**: new_pinternship_2026-02-01 (66 FAQs, 11 categories)
+**Active**: new_pinternship_2026-02-04 (73 FAQs, 12 categories)
 - Pinternship program by VLED Lab, IIT Ropar
 - Source: Local FAQ.md
 - Combined text embeddings enabled
