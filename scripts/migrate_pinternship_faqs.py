@@ -29,13 +29,17 @@ COLLECTION_NAME = os.getenv('COLLECTION_NAME', "questions")
 EMBEDDING_MODEL = 'BAAI/bge-large-en-v1.5'
 
 # Path to FAQ data file
-# Check if running in Docker container (script is in /app/)
-if Path('/app/FAQ_Data').exists():
-    # Running in Docker container
-    FAQ_DATA_FILE = Path('/app/FAQ_Data/new_pinternship_2026-02-01/pinternship_faqs.json')
+# Path to FAQ data file
+# Allow overriding via environment variable
+custom_path = os.getenv('FAQ_FILE_PATH')
+if custom_path:
+    FAQ_DATA_FILE = Path(custom_path)
+elif Path('/app/FAQ_Data').exists():
+    # Running in Docker container (default fallback)
+    FAQ_DATA_FILE = Path('/app/FAQ_Data/latest/pinternship_faqs.json')
 else:
     # Running locally (relative to script location)
-    FAQ_DATA_FILE = Path(__file__).parent.parent / 'FAQ_Data' / 'new_pinternship_2026-02-01' / 'pinternship_faqs.json'
+    FAQ_DATA_FILE = Path(__file__).parent.parent / 'FAQ_Data' / 'latest' / 'pinternship_faqs.json'
 
 
 def load_faq_data():
@@ -49,25 +53,9 @@ def load_faq_data():
     return data['faqs'], data.get('source', 'Unknown'), data.get('total_faqs', len(data['faqs']))
 
 
-def generate_question_id(category: str, question_num: int) -> str:
-    """Generate question ID based on category."""
-    category_map = {
-        "Internship Overview": 1,
-        "Mode of Internship & Attendance": 2,
-        "Mentorship & Guidance": 3,
-        "Support and Resolution Protocol": 4,
-        "Completion & Certification": 5,
-        "Discontinuation Policy": 6,
-        "ViBe Platform": 7,
-        "Cliq Channel": 8,
-        "MERN Case Studies": 9,
-        "Ejection Policy": 10,
-        "Self-Healing Endorsement Network - Viva/Peer Evaluation System(PES)": 11,
-        "Health Points": 12,
-    }
-    
-    category_num = category_map.get(category, 99)
-    return f"Q{category_num}.{question_num}"
+def generate_question_id(category_id: int, question_num: int) -> str:
+    """Generate question ID based on category ID."""
+    return f"Q{category_id}.{question_num}"
 
 
 def main():
@@ -128,8 +116,11 @@ def main():
             category_counters[category] = 0
         category_counters[category] += 1
         
+        # Get category_id from data (default to 99 if missing)
+        category_id = faq.get('category_id', 99)
+        
         # Generate question ID
-        question_id = generate_question_id(category, category_counters[category])
+        question_id = generate_question_id(category_id, category_counters[category])
         
         # Generate embedding from combined question + answer
         # This provides richer semantic context for better search accuracy
