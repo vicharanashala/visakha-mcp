@@ -21,7 +21,7 @@ FAQ_Data/
 ├── new_pinternship_2026-02-01/       # Pinternship FAQ data v3 (66 FAQs)
 │   └── pinternship_faqs.json
 │
-└── new_pinternship_2026-02-04/       # Pinternship FAQ data v4 (73 FAQs)
+└── new_pinternship_2026-02-14/       # Pinternship FAQ data v4 (98 FAQs)
     └── pinternship_faqs.json         # Active Source Data
 ```
 
@@ -46,7 +46,7 @@ python3 scripts/automate_faq_update.py FAQ.md
 ```
 
 This script will:
-1. Parse the Markdown file
+1. Parse the Markdown file (supports both `**1.1 Question**` and `Q1. Question` formats)
 2. Generate the JSON dataset with automatically assigned category IDs
 3. Deploy to Docker and execute migration in one step
 
@@ -61,7 +61,7 @@ The JSON file contains:
 
 ## Current Data
 
-**Active**: new_pinternship_2026-02-04 (73 FAQs, 12 categories)
+**Active**: new_pinternship_2026-02-14 (98 FAQs, 13 categories)
 - Pinternship program by VLED Lab, IIT Ropar
-- Source: Local FAQ.md
+- Source: Local README.md / fad.md
 - Combined text embeddings enabled

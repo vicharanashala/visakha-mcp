@@ -59,9 +59,24 @@ cp .env.example .env
 # Run the FAQ server
 python src/faq.py
 
+```bash
 # Run the Admin server
 python src/admin_server.py
 ```
+
+## Automated Updates
+
+To update the entire FAQ database from a local `FAQ.md` file:
+
+```bash
+python3 scripts/automate_faq_update.py FAQ.md
+```
+
+This script will:
+1. Parse the Markdown file (supports both `**1.1 Question**` and `Q1. Question` formats)
+2. Generate the JSON dataset
+3. Automatically deploy to the running `faq-mcp-server` container
+4. Trigger the migration process (DB cleanup + embedding regeneration)
 
 ## Usage
 
