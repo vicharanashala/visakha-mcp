@@ -37,6 +37,8 @@ def parse_faq_md(file_path):
     # Matches: **1.1 What is this...** or **1.1 What...?**
     # We use a flexible pattern: starts with **digits.digits, captures text until **
     question_pattern = re.compile(r'^\*\*(\d+\.\d+)\s+(.+?)\*\*')
+    # Matches: Q1. Question text (Used in Section 13)
+    question_pattern_simple = re.compile(r'^Q(\d+)\.\s+(.+)$')
 
     i = 0
     while i < len(lines):
@@ -50,12 +52,21 @@ def parse_faq_md(file_path):
             i += 1
             continue
             
-        # Check for Question
+        # Check for Question (Standard Format)
         q_match = question_pattern.match(line)
-        if q_match:
-            question_num = q_match.group(1)
-            question_text = q_match.group(2).strip()
-            
+        q_match_simple = question_pattern_simple.match(line)
+        
+        if q_match or q_match_simple:
+            if q_match:
+                question_num = q_match.group(1)
+                question_text = q_match.group(2).strip()
+            else:
+                # For Q1., we construct a proper ID if possible, or just use the number
+                raw_num = q_match_simple.group(1)
+                question_text = q_match_simple.group(2).strip()
+                # Try to make it 13.1 if current category is 13
+                question_num = f"{current_category_id}.{raw_num}" if current_category_id != 99 else raw_num
+
             # Extract Answer
             answer_lines = []
             i += 1
@@ -64,6 +75,7 @@ def parse_faq_md(file_path):
                 # Stop if next line is a header, new question, or separator
                 if (category_pattern.match(next_line) or 
                     question_pattern.match(next_line) or 
+                    question_pattern_simple.match(next_line) or
                     next_line == '---'):
                     break
                 if next_line:

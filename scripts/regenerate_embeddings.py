@@ -38,9 +38,13 @@ def main():
     print(f"\nGenerating embeddings...")
     for faq in tqdm(faqs, desc="Processing FAQs"):
         question = faq.get('question', '')
-        if question:
-            # Generate embedding
-            embedding = model.encode(question).tolist()
+        answer = faq.get('answer', '')
+        
+        if question and answer:
+            # Generate embedding from combined question + answer
+            # This matches the logic in migrate_pinternship_faqs.py
+            combined_text = f"{question} {answer}"
+            embedding = model.encode(combined_text).tolist()
             
             # Update in MongoDB
             collection.update_one(
